@@ -32,7 +32,7 @@ jobs:
           fetch-depth: 0
       - uses: ./.github/actions/sonar
         env:
-          SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
+          SONAR_HOST_URL: http://13.212.4.149:9000
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 
   k6_smoke:
