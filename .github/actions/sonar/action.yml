@@ -17,4 +17,4 @@ runs:
       run: npm test -- --coverage
 
     - name: SonarQube Scan
-      uses: SonarSource/sonarqube-scan-action@v5
+      uses: SonarSource/sonarqube-scan-action@v6
