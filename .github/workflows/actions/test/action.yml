@@ -1,0 +1,17 @@
+name: "Unit Test Action"
+description: "Run Jest tests with coverage"
+runs:
+  using: "composite"
+  steps:
+    - uses: actions/setup-node@v4
+      with:
+        node-version: "20"
+        cache: "npm"
+
+    - name: Install dependencies
+      shell: bash
+      run: npm ci
+
+    - name: Run unit tests with coverage
+      shell: bash
+      run: npm test -- --coverage
